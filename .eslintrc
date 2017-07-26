@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "modules": true
+      }
+  },
+
+  "rules": {
+    "keyword-spacing": [2],
+    "max-len": [2, {"code": 120, "tabWidth": 2, "ignoreUrls": true}],
+    "no-console": 0,
+    "prefer-arrow-callback": [2, {
+      "allowNamedFunctions": true
+    }]
+  },
+
+  "env": {
+    "es6": true,
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+
+  "extends": ["eslint:recommended"]
+}
