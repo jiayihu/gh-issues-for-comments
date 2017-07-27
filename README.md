@@ -67,7 +67,7 @@ Create a Github issue for every article without a comments issue yet. Returns a 
 
   Default value: `id`
   
-  Article property to use as unique id
+  Article property to use as unique id. If an id is not available, it's recommended to use something meaninful but not likely to change like the filepath or title.
 
 - **options.jsonPath** (*optional*)
   
@@ -92,4 +92,17 @@ Create a Github issue for every article without a comments issue yet. Returns a 
   }
   ```
   
-  Returns the issue data based on the article
+  Returns the issue data based on the article. If you want the article name, in the issue body, to be linked you can use the following value:
+
+  ```javascript
+  function getIssue(article) {
+    const formattedTitle = article.title.replace(/\s/g, '-').toLowerCase();
+    const articleUrl = url.resolve('http://blog.jiayihu.net', formattedTitle);
+
+    return {
+      title: `Comments: ${article.title}`,
+      body: `This issue is reserved for comments to [${article.title}](${articleUrl}). Leave a comment below and it will be shown in the blog page.`,
+      labels: ['comments'],
+    };
+  },
+  ```
