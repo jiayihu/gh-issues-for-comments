@@ -105,10 +105,10 @@ const defaultOptions = {
 export default function ghComments(articles, userOptions) {
   const options = Object.assign({}, defaultOptions, userOptions);
 
-  return getArticlesJSON(options.jsonPath)
+  return getArticlesJSON(options)
     .then(createdIssues => createIssues(articles, createdIssues, options))
     .then(createdIssues => {
-      saveArticlesJSON(createdIssues);
+      saveArticlesJSON(createdIssues, options);
       return createdIssues;
     });
 }

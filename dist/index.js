@@ -112,10 +112,10 @@ var defaultOptions = {
 function ghComments(articles, userOptions) {
   var options = Object.assign({}, defaultOptions, userOptions);
 
-  return getArticlesJSON(options.jsonPath).then(function (createdIssues) {
+  return getArticlesJSON(options).then(function (createdIssues) {
     return createIssues(articles, createdIssues, options);
   }).then(function (createdIssues) {
-    saveArticlesJSON(createdIssues);
+    saveArticlesJSON(createdIssues, options);
     return createdIssues;
   });
 }

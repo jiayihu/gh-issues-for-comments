@@ -33,7 +33,7 @@ ghComments(articles, {
 
 ## API
 
-### ghComments(articles, options)
+### ghComments(articles, options): Promise
 
 Create a Github issue for every article without a comments issue yet. Returns a `Promise` with the updated map with `<article, issueId>` pairs. It's the same object saved in `gh-comments.json`.
 
