@@ -106,3 +106,15 @@ Create a Github issue for every article without a comments issue yet. Returns a 
     };
   },
   ```
+
+## Avoid issue creation
+
+The script won't open an issue for an article if it finds an `issueId` in `gh-comments.json` for *that* article. So for example you can add the following content to skip issue creation for `articles/angular-aot.html`.
+
+```json
+{
+  "articles/angular-aot.html": {
+    "issueId": -1
+  }
+}
+```
