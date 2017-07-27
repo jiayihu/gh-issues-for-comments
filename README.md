@@ -1,5 +1,7 @@
 # gh-issues-for-comments
 
+[![npm](https://img.shields.io/npm/v/gh-issues-for-comments.svg)](https://www.npmjs.com/package/gh-issues-for-comments)
+
 Automatically open a **Github issue as blog comments** for every articles of your blog. It also creates a `gh-comments.json` file to keep track of created issues for future executions and to open issues only for new articles.
 
 This package is useful if you have a statically generated blog, such as [Jekyll](https://jekyllrb.com) or [Metalsmith](http://www.metalsmith.io), and you want to use Github issues as comments instead of the evil `Disqus`. For more details read [Replacing Disqus with Github Comments](http://donw.io/post/github-comments/) or [Using GitHub Issues for Blog Comments](http://artsy.github.io/blog/2017/07/15/Comments-are-on/)
